@@ -16,3 +16,4 @@ Calculate the difference in time between each of the recent earthquakes in Alask
 ```PowerShell
 source=all_month.csv place=*alaska* | delta _time p=1 | rename delta(_time) AS timeDeltaS | eval timeDeltaS=abs(timeDeltaS) | eval "Time Between Quakes"=tostring(timeDeltaS,"duration") | table place, _time, "Time Between Quakes"
 ```
+
