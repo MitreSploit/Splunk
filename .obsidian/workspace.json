@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Important-Notes/Baseline.md",
+                "file": "Important-Notes/Baselining/Windows-AD-Env/Common Baseline Notes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Baseline"
+              "title": "Common Baseline Notes"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 274.5
+    "width": 200
   },
   "right": {
     "id": "897fb709bc81c69f",
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Important-Notes/Baseline.md",
+                "file": "Important-Notes/Baselining/Windows-AD-Env/Common Baseline Notes.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Baseline"
+              "title": "Outline of Common Baseline Notes"
             }
           },
           {
@@ -194,10 +194,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a13d5ec2a3b5fdd5",
+  "active": "ffd9f16c2485be29",
   "lastOpenFiles": [
+    "Important-Notes/Baselining/Windows-AD-Env/User Behaviour.md",
+    "Important-Notes/Baselining/Windows-AD-Env",
+    "Important-Notes/Baselining/Windows-AD-Env/System Performance.md",
+    "Important-Notes/Baselining/Windows-AD-Env/Common Baseline Notes.md",
+    "Important-Notes/Baselining",
     "Untitled.base",
-    "Important-Notes/Baseline.md",
     "Functions/Multivalue Eval Functions/Multivalue eval functions.md",
     "Important-Notes",
     "Practice-Dashboards/Network/Implementation.md",
@@ -215,7 +219,6 @@
     "Practice-Dashboards/Network",
     "Functions/NEW",
     "Functions/Delta/Delta.md",
-    "Functions/NEW/Transaction",
-    "Untitled 1.base"
+    "Functions/NEW/Transaction"
   ]
 }
