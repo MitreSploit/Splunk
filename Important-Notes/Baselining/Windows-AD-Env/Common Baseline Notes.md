@@ -56,12 +56,12 @@ index=botsv2 AND EventCode=4624
 | eval Computer = ComputerName . " - " . src_ip
 | eval Expanded = case(Logon_Type = 2, "2 - Interactive", Logon_Type = 3, "3 - Network", Logon_Type = 4, "4 - Batch", Logon_Type = 5, "5 - Service", Logon_Type = 8, "8 - NetworkCleartext", Logon_Type = 9, "9 - NewCredentials", Logon_Type = 10, "10 - RemoteInteractive")
 
-| stats count by Computer, src_user, Expanded
+| stats count by Computer, user, Expanded
 
 | eval stage1_source = Computer
-| eval stage1_target = src_user
+| eval stage1_target = user
 
-| eval stage2_source = src_user
+| eval stage2_source = user
 | eval stage2_target = Expanded
 
 | appendpipe [  
@@ -76,5 +76,4 @@ stats sum(count) as count by stage2_source stage2_target
   
 | stats sum(count) as count by source target
 ```
-
 
