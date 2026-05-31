@@ -39,8 +39,42 @@ by src_ip
 
 
 ##### 2. Users, Privileged Users and Service Accounts
-A general approach to how to 
+
+1. <span style="color:rgb(255, 192, 0)">Standard Users</span>
+All users --> Remember to use **`spath`** when the XML data in Message isn't extracting subfields: 
+```bash
+index=botsv2 AND EventCode=4624
+```
 
 
+I created a Sankey Diagram that depicts the following flow of information: 
+<span style="color:rgb(0, 176, 80)">Computer Name & IP</span> ------> <span style="color:rgb(0, 176, 80)">Username or Computer Name</span> ----> <span style="color:rgb(0, 176, 80)">Logon Type</span>
+```bash
+index=botsv2 AND EventCode=4624
+| fillnull value=unknown src_user
+
+| eval Computer = ComputerName . " - " . src_ip
+| eval Expanded = case(Logon_Type = 2, "2 - Interactive", Logon_Type = 3, "3 - Network", Logon_Type = 4, "4 - Batch", Logon_Type = 5, "5 - Service", Logon_Type = 8, "8 - NetworkCleartext", Logon_Type = 9, "9 - NewCredentials", Logon_Type = 10, "10 - RemoteInteractive")
+
+| stats count by Computer, src_user, Expanded
+
+| eval stage1_source = Computer
+| eval stage1_target = src_user
+
+| eval stage2_source = src_user
+| eval stage2_target = Expanded
+
+| appendpipe [  
+stats sum(count) as count by stage1_source stage1_target  
+| rename stage1_source as source stage1_target as target  
+]  
+
+| appendpipe [  
+stats sum(count) as count by stage2_source stage2_target  
+| rename stage2_source as source stage2_target as target  
+]  
+  
+| stats sum(count) as count by source target
+```
 
 
