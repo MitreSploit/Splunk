@@ -79,7 +79,8 @@ stats sum(count) as count by stage2_source stage2_target
 ```
 
 
-Playing around with some different collection methods:
+- Playing around with some different collection methods.
+- <span style="color:rgb(0, 176, 80)">The following uses <b>`eval`</b> to individually separate users with successful login events from users with failed login events. </span>
 ```bash
 index=botsv2 AND (EventCode=4624 OR EventCode=4625)
 
@@ -92,4 +93,5 @@ values(Successful_Login_Users) AS Successful_Logins,
 values(Failed_Login_Users) AS Failed_Logins,
 dc(Account_Name) AS All_User_Name_Count
 ```
+
 
