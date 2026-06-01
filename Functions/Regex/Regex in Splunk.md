@@ -20,3 +20,10 @@ index=botsv1 AND sourcetype="WinEventLog:Security" AND EventCode=4688
 | table Creator_Account, Security_ID, New_Process_Name, Creator_Process_Name, Process_Command_Line
 ```
 
+
+# Lazy Matching Examples:
+```PowerShell
+index=botsv1 AND EventCode=4648
+| rex field=Message "(?ms)Security ID:\s*(?<Security_ID>\s*(.*?)$)"
+| stats count by Security_ID
+```
