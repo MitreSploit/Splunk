@@ -8,17 +8,33 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ffd9f16c2485be29",
+            "id": "f0373ea33ed6eb3d",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Hunting-And-Theory/Baselining/Windows-AD-Env/Common Baseline Notes.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "Common Baseline Notes"
+            }
+          },
+          {
+            "id": "f758a9cce73afa5f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Important-Notes/Baseline.md",
+                "file": "Functions/Regex/Regex in Splunk.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Baseline"
+              "title": "Regex in Splunk"
             }
           }
         ]
@@ -78,7 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 274.5
+    "width": 235.5
   },
   "right": {
     "id": "897fb709bc81c69f",
@@ -156,13 +172,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Important-Notes/Baseline.md",
+                "file": "Important-Notes/Baselining/Windows-AD-Env/Common Baseline Notes.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Baseline"
+              "title": "Outline of Common Baseline Notes"
             }
           },
           {
@@ -194,28 +210,32 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a13d5ec2a3b5fdd5",
+  "active": "f0373ea33ed6eb3d",
   "lastOpenFiles": [
-    "Untitled.base",
-    "Important-Notes/Baseline.md",
+    "Functions/Regex/Regex in Splunk.md",
+    "Hunting-And-Theory/Baselining/Windows-AD-Env/Common Baseline Notes.md",
     "Functions/Multivalue Eval Functions/Multivalue eval functions.md",
-    "Important-Notes",
+    "Functions/NEW/Transaction/Using transaction.md",
+    "Functions/NEW/Case/Using Case and Term.md",
+    "Functions/Sankey/Sankey Diagram.md",
+    "Pasted image 20260601090912.png",
+    "Hunting-And-Theory/Baselining/Windows-AD-Env/User Behaviour.md",
+    "Hunting-And-Theory/Baselining/Windows-AD-Env",
+    "Hunting-And-Theory/Baselining/Windows-AD-Env/System Performance.md",
+    "Hunting-And-Theory/Baselining",
+    "Untitled.base",
+    "Hunting-And-Theory",
     "Practice-Dashboards/Network/Implementation.md",
     "Functions/Multivalue Eval Functions",
     "Practice-Dashboards/Network/Dashboard Idea.md",
     "Practice-Dashboards/User-Activity And Extracting Message.md",
     "Practice-Dashboards/Dashboard I made - Logic.md",
     "Research/Event Code 4738.md",
-    "Functions/Sankey/Sankey Diagram.md",
     "Research",
-    "Functions/Regex/Regex in Splunk.md",
-    "Functions/NEW/Case/Using Case and Term.md",
     "Functions/NEW/Case",
-    "Functions/NEW/Transaction/Using transaction.md",
     "Practice-Dashboards/Network",
     "Functions/NEW",
     "Functions/Delta/Delta.md",
-    "Functions/NEW/Transaction",
-    "Untitled 1.base"
+    "Functions/NEW/Transaction"
   ]
 }
