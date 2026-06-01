@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Important-Notes/Baselining/Windows-AD-Env/Common Baseline Notes.md",
+                "file": "Hunting-And-Theory/Baselining/Windows-AD-Env/Common Baseline Notes.md",
                 "mode": "source",
                 "source": false
               },
@@ -210,18 +210,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ffd9f16c2485be29",
+  "active": "110a03b4905c4c38",
   "lastOpenFiles": [
     "Functions/Sankey/Sankey Diagram.md",
-    "Important-Notes/Baselining/Windows-AD-Env/Common Baseline Notes.md",
+    "Hunting-And-Theory/Baselining/Windows-AD-Env/Common Baseline Notes.md",
     "Pasted image 20260601090912.png",
-    "Important-Notes/Baselining/Windows-AD-Env/User Behaviour.md",
-    "Important-Notes/Baselining/Windows-AD-Env",
-    "Important-Notes/Baselining/Windows-AD-Env/System Performance.md",
-    "Important-Notes/Baselining",
+    "Hunting-And-Theory/Baselining/Windows-AD-Env/User Behaviour.md",
+    "Hunting-And-Theory/Baselining/Windows-AD-Env",
+    "Hunting-And-Theory/Baselining/Windows-AD-Env/System Performance.md",
+    "Hunting-And-Theory/Baselining",
     "Untitled.base",
     "Functions/Multivalue Eval Functions/Multivalue eval functions.md",
-    "Important-Notes",
+    "Hunting-And-Theory",
     "Practice-Dashboards/Network/Implementation.md",
     "Functions/Multivalue Eval Functions",
     "Practice-Dashboards/Network/Dashboard Idea.md",

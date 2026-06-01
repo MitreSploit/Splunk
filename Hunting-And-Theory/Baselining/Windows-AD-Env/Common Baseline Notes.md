@@ -38,7 +38,7 @@ by src_ip
 
 
 
-##### 2. Users, Privileged Users and Service Accounts
+##### 2. Standard Users
 
  1. <span style="color:rgb(0, 176, 240)">Standard Users</span> --> <span style="color:rgb(0, 176, 240)">Different ways to capture the data:</span>
 - All users --> Remember to use <b>`spath`</b> when the XML data in Message isn't extracting subfields
@@ -94,4 +94,7 @@ values(Failed_Login_Users) AS Failed_Logins,
 dc(Account_Name) AS All_User_Name_Count
 ```
 
+##### 3. Privileged Users
+- I believe the main focus I'm going to go with here will be on Event Code 4672 --> Special Privileges Assigned
 
+##### 4. Service Accounts
