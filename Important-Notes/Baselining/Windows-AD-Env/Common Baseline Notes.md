@@ -40,15 +40,16 @@ by src_ip
 
 ##### 2. Users, Privileged Users and Service Accounts
 
-1. <span style="color:rgb(255, 192, 0)">Standard Users</span>
-All users --> Remember to use **`spath`** when the XML data in Message isn't extracting subfields: 
+ 1. <span style="color:rgb(0, 176, 240)">Standard Users</span> --> <span style="color:rgb(0, 176, 240)">Different ways to capture the data:</span>
+- All users --> Remember to use <b>`spath`</b> when the XML data in Message isn't extracting subfields
+- Event Code 4624 will be the primary code that I will use here
 ```bash
 index=botsv2 AND EventCode=4624
 ```
 
 
-I created a Sankey Diagram that depicts the following flow of information: 
-<span style="color:rgb(0, 176, 80)">Computer Name & IP</span> ------> <span style="color:rgb(0, 176, 80)">Username or Computer Name</span> ----> <span style="color:rgb(0, 176, 80)">Logon Type</span>
+- I created a Sankey Diagram that depicts the following flow of information: 
+- <span style="color:rgb(0, 176, 80)">Computer Name & IP</span> ------> <span style="color:rgb(0, 176, 80)">Username or Computer Name</span> ----> <span style="color:rgb(0, 176, 80)">Logon Type</span>
 ```bash
 index=botsv2 AND EventCode=4624
 | fillnull value=unknown src_user
@@ -77,3 +78,11 @@ stats sum(count) as count by stage2_source stage2_target
 | stats sum(count) as count by source target
 ```
 
+
+Playing around with some different collection methods:
+```bash
+index=botsv2 AND EventCode=4624
+| stats
+values(Security_ID) AS Usernames,
+dc(Security_ID) AS Unique_Name_Count
+```
