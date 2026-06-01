@@ -81,8 +81,15 @@ stats sum(count) as count by stage2_source stage2_target
 
 Playing around with some different collection methods:
 ```bash
-index=botsv2 AND EventCode=4624
+index=botsv2 AND (EventCode=4624 OR EventCode=4625)
+
+| eval Successful_Login_Users = if(EventCode=4624, Account_Name, null())
+| eval Failed_Login_Users = if(EventCode=4625, Account_Name, null())
+
 | stats
-values(Security_ID) AS Usernames,
-dc(Security_ID) AS Unique_Name_Count
+values(Account_Name) AS All_Login_Usernames,
+values(Successful_Login_Users) AS Successful_Logins,
+values(Failed_Login_Users) AS Failed_Logins,
+dc(Account_Name) AS All_User_Name_Count
 ```
+
