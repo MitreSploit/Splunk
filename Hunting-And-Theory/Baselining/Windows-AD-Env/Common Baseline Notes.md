@@ -1,8 +1,12 @@
 # Table Of Contents
 - [[#1. Hosts on the Network|1. Hosts on the Network]]
-- [[#2. Users, Privileged Users and Service Accounts|2. Users, Privileged Users and Service Accounts]]
+- [[#2. Standard Users|2. Standard Users]]
+- [[#3. Privileged Users|3. Privileged Users]]
+- [[#4. Service Accounts|4. Service Accounts]]
 
-**All investigation has been accomplished using Splunk BOTS**
+**All investigation has been conducted using Splunk BOTS**
+
+
 ##### 1. Hosts on the Network
 In almost every exercise or task that I have come across, there has always been a request to confirm that the network map that I have received is valid? That's if I have a network map at all. The first thing we are usually told is to match the IP Addresses, MAC Addresses and Hostnames. 
 
@@ -95,6 +99,34 @@ dc(Account_Name) AS All_User_Name_Count
 ```
 
 ##### 3. Privileged Users
-- I believe the main focus I'm going to go with here will be on Event Code 4672 --> Special Privileges Assigned
+- I believe the main focus I'm going to go with here will be on Event Code **`4672`** --> Special Privileges Assigned.
+- I think a big one here might also be Event Code **`4738`** --> This tracks when a users account properties or privileges are modified. 
 
+- <span style="color:rgb(0, 176, 80)">The following is just a simple display of privileged Users: </span>
+```bash
+index=botsv2 AND EventCode=4672
+| stats 
+values(Account_Name) AS Usernames,
+dc(Account_Name) AS Unique_Name_Count
+```
+
+- In regards to Event Code **`4738`** I think for research will be required to best utilize this event code. 
 ##### 4. Service Accounts
+- The approach I took to this was to look for Logins where the Logon Type is equal to either `4`(A batch job) or `5` (A service starts) --> I don't think this will capture all the types I'm looking for, however I will start with this. 
+
+- <span style="color:rgb(0, 176, 80)">General Search I put together looking for either successful or failed login attempts with the logon type being either 4 or 5:</span>
+```bash
+index=botsv2 AND (EventCode=4624 OR EventCode=4625) AND (Logon_Type=4 OR Logon_Type=5)
+
+| stats 
+values(src_user) AS Src_User
+values(user) AS Target_User
+values(dest_ip) AS Dest_IP
+values(dest_owner) AS Dest_Owner
+values(Logon_Process) AS Logon_Process
+values(Process_Name) AS Process_Name
+BY ComputerName
+```
+
+
+
