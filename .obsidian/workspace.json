@@ -37,8 +37,7 @@
               "title": "Regex in Splunk"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -211,10 +210,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f758a9cce73afa5f",
+  "active": "f0373ea33ed6eb3d",
   "lastOpenFiles": [
-    "Hunting-And-Theory/Baselining/Windows-AD-Env/Common Baseline Notes.md",
     "Functions/Regex/Regex in Splunk.md",
+    "Hunting-And-Theory/Baselining/Windows-AD-Env/Common Baseline Notes.md",
     "Functions/Multivalue Eval Functions/Multivalue eval functions.md",
     "Functions/NEW/Transaction/Using transaction.md",
     "Functions/NEW/Case/Using Case and Term.md",

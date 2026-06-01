@@ -7,6 +7,7 @@
 **All investigation has been conducted using Splunk BOTS**
 
 
+# General Hosts and Users
 ##### 1. Hosts on the Network
 In almost every exercise or task that I have come across, there has always been a request to confirm that the network map that I have received is valid? That's if I have a network map at all. The first thing we are usually told is to match the IP Addresses, MAC Addresses and Hostnames. 
 
@@ -129,5 +130,13 @@ BY ComputerName
 ```
 
 
+# Processes and Services
+##### 6. Processes Running
+- Commonly during baselining it is important to understand the active processes. I will attempt to create a readable table or Sankey diagram for this. 
 
+<span style="color:rgb(0, 176, 80)">Example Table:</span>
+Using Process Creation I should be able to get a table like this together: 
+
+| Process Name | PID | Parent Process Name | PPID | Threads | Handles | Session | Owner | Path |
+| ------------ | --- | ------------------- | ---- | ------- | ------- | ------- | ----- | ---- |
 
