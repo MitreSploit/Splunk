@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "893dc2ba5255f71d",
+        "id": "98d749008a5a07fb",
         "type": "tabs",
         "children": [
           {
-            "id": "e7134b085cf9865f",
+            "id": "0299b3139a472169",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
-                "aRef": ""
+                "file": "Functions/Lookups/Lookup Tables.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: workspace.json  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "Lookup Tables"
             }
           }
         ]
@@ -194,7 +194,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e7134b085cf9865f",
+  "active": "7ec99e799a165ea4",
   "lastOpenFiles": [
     "Functions/Lookups/Lookup Tables.md",
     "Research/Event Code 4738.md",
