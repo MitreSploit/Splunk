@@ -1,3 +1,15 @@
+# Create the Lookup table in BOTs - DNS Exfiltration - Like this:
+```PowerShell
+index=botsv2 AND sourcetype="stream:dns" AND query=* AND answer=* AND query_type="A"
+| rename answer AS IP_Addr
+
+| stats values(query) as Hostname by IP_Addr
+| sort IP_Addr
+| outputlookup dns_resolution.csv
+```
+
+
+## Splunk BOTs Full XML:
 ```PowerShell
 {
 
