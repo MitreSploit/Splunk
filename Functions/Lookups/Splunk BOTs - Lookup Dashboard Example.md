@@ -182,14 +182,6 @@ index=botsv2 AND sourcetype="stream:dns" AND query=* AND answer=* AND query_type
 		}
 	},
 	"inputs": {
-		"input_global_trp": {
-			"type": "input.timerange",
-			"options": {
-				"token": "global_time",
-				"defaultValue": "-4h@m,now"
-			},
-			"title": "Global Time Range"
-		},
 		"input_iSdpsz3b": {
 			"options": {
 				"defaultValue": "*",
@@ -277,7 +269,6 @@ index=botsv2 AND sourcetype="stream:dns" AND query=* AND answer=* AND query_type
 			}
 		],
 		"globalInputs": [
-			"input_global_trp",
 			"input_iSdpsz3b",
 			"input_uCz0K6R9"
 		]
