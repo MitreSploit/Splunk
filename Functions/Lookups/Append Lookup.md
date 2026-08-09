@@ -18,19 +18,19 @@ index=<> sourcetype=zeek:dns.log AND query=* AND answers=*
 
 ## 2. Append the results, allowing multi values:
 ```
-index=<> sourcetype=zeek:dns.log AND query=* AND answers=*
+index=botsv2 AND sourcetype="stream:dns" AND query=* AND answer=* AND query_type="A"
 ``` Change the field etc. ```
 
 | rename query as Hostname, answers as IP_Addr
 
 | append [
-    |  inputlookup dns_IP_lookup.csv
-    | makemv delim=” “ Hostname
+    |  inputlookup dns_resolution.csv
+    |  makemv delim=" " Hostname
 ]
 
 | dedup IP_Addr
 | sort IP_Addr
 
 ```Optional – Redo the table```
-| outputlookup dns_IP_lookup.csv
+| outputlookup dns_resolution.csv
 ```
