@@ -194,8 +194,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0299b3139a472169",
+  "active": "fb743ce66db66663",
   "lastOpenFiles": [
+    "Functions/Lookups/Static Tables and Additional Dashboard.md",
+    "Dashboard-Ideas/Dashboard Query Suggestions.md",
+    "Dashboard-Ideas",
     "Functions/Lookups/Dashboard with lookup.md",
     "Functions/Lookups/Splunk BOTs - Lookup Dashboard Example.md",
     "Functions/Lookups/Lookup Tables.md",
@@ -220,7 +223,6 @@
     "Functions/NEW/Case",
     "Functions/NEW",
     "Functions/Multivalue Eval Functions/Multivalue eval functions.md",
-    "Functions/Multivalue Eval Functions",
     "Untitled.canvas"
   ]
 }
